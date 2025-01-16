@@ -1,0 +1,1 @@
+UPDATE cards SET name = 'MewWow', description = 'wow' WHERE cards.id = 12 RETURNING name, description;

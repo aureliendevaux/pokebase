@@ -1,0 +1,2 @@
+INSERT INTO rarities (uid, name, created_at, updated_at) VALUES ('01946c98-aede-75be-9699-b379183e96c9', 'testets3', now(), now()),
+                                                                    ('01946c98-aede-75be-9699-b379183e96c8', 'testets1', now(), now());
