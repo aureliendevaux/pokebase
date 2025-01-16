@@ -1,0 +1,1246 @@
+{
+	"id": "0",
+	"name": "dc4_pokemon",
+	"createdAt": "2024-11-14T11:18:38.230Z",
+	"updatedAt": "2024-11-14T11:18:38.230Z",
+	"databaseType": "postgresql",
+	"tables": [
+		{
+			"id": "1",
+			"name": "cards",
+			"x": 100,
+			"y": 100,
+			"fields": [
+				{
+					"id": "2",
+					"name": "id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": true,
+					"createdAt": 1731579650053
+				},
+				{
+					"id": "3",
+					"name": "uid",
+					"type": {
+						"name": "uuid",
+						"id": "uuid"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579660832
+				},
+				{
+					"id": "4",
+					"name": "name",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579670750
+				},
+				{
+					"id": "5",
+					"name": "thumbnail",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579678801
+				},
+				{
+					"id": "6",
+					"name": "description",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": false,
+					"nullable": true,
+					"primaryKey": false,
+					"createdAt": 1731579722965
+				},
+				{
+					"id": "7",
+					"name": "card_typology_id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579754562
+				},
+				{
+					"id": "8",
+					"name": "card_type_id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579770232
+				},
+				{
+					"id": "9",
+					"name": "rarity",
+					"type": {
+						"name": "smallint",
+						"id": "smallint"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579781636
+				},
+				{
+					"id": "10",
+					"name": "serial_number",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579818782
+				},
+				{
+					"id": "11",
+					"name": "illustrator_id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579891427
+				},
+				{
+					"id": "12",
+					"name": "pv",
+					"type": {
+						"name": "smallint",
+						"id": "smallint"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579909322
+				},
+				{
+					"id": "13",
+					"name": "extension_id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579980859
+				},
+				{
+					"id": "14",
+					"name": "created_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579991509,
+					"comments": "NOW()"
+				},
+				{
+					"id": "15",
+					"name": "updated_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731580011378,
+					"comments": "NOW()"
+				}
+			],
+			"indexes": [
+				{
+					"id": "16",
+					"name": "multiple_names",
+					"fieldIds": ["4", "9", "13"],
+					"unique": true,
+					"createdAt": 1731580066243
+				}
+			],
+			"color": "#c05dcf",
+			"createdAt": 1731579650053,
+			"isView": false,
+			"diagramId": "wkgvxh27sthp",
+			"width": 224
+		},
+		{
+			"id": "17",
+			"name": "cards_collections",
+			"x": 500,
+			"y": 100,
+			"fields": [
+				{
+					"id": "18",
+					"name": "card_id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579567178
+				},
+				{
+					"id": "19",
+					"name": "collection_id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579582966
+				},
+				{
+					"id": "20",
+					"name": "created_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579590983
+				}
+			],
+			"indexes": [
+				{
+					"id": "21",
+					"name": "primary_key",
+					"fieldIds": ["18", "19"],
+					"unique": true,
+					"createdAt": 1731579622844
+				}
+			],
+			"color": "#9ef07a",
+			"createdAt": 1731579567178,
+			"isView": false,
+			"diagramId": "wkgvxh27sthp"
+		},
+		{
+			"id": "22",
+			"name": "collections",
+			"x": 900,
+			"y": 100,
+			"fields": [
+				{
+					"id": "23",
+					"name": "id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": true,
+					"createdAt": 1731579061553
+				},
+				{
+					"id": "24",
+					"name": "uid",
+					"type": {
+						"name": "uuid",
+						"id": "uuid"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579086434
+				},
+				{
+					"id": "25",
+					"name": "name",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579116399
+				},
+				{
+					"id": "26",
+					"name": "slug",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579096385
+				},
+				{
+					"id": "27",
+					"name": "public",
+					"type": {
+						"name": "boolean",
+						"id": "boolean"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579179069,
+					"comments": "FALSE"
+				},
+				{
+					"id": "28",
+					"name": "created_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579197663,
+					"comments": "NOW()"
+				},
+				{
+					"id": "29",
+					"name": "updated_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579209576,
+					"comments": "NOW()"
+				}
+			],
+			"indexes": [],
+			"color": "#ff9f74",
+			"createdAt": 1731579061553,
+			"isView": false,
+			"diagramId": "wkgvxh27sthp"
+		},
+		{
+			"id": "30",
+			"name": "collections_users",
+			"x": 1300,
+			"y": 100,
+			"fields": [
+				{
+					"id": "31",
+					"name": "collection_id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579225737
+				},
+				{
+					"id": "32",
+					"name": "user_id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579257593
+				},
+				{
+					"id": "33",
+					"name": "created_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579266688,
+					"comments": "NOW()"
+				}
+			],
+			"indexes": [
+				{
+					"id": "34",
+					"name": "primary_key",
+					"fieldIds": ["31", "32"],
+					"unique": true,
+					"createdAt": 1731579312437
+				}
+			],
+			"color": "#8a61f5",
+			"createdAt": 1731579225737,
+			"isView": false,
+			"diagramId": "wkgvxh27sthp"
+		},
+		{
+			"id": "35",
+			"name": "invitations",
+			"x": 1700,
+			"y": 100,
+			"fields": [
+				{
+					"id": "36",
+					"name": "id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": true,
+					"createdAt": 1731579402972
+				},
+				{
+					"id": "37",
+					"name": "uid",
+					"type": {
+						"name": "uuid",
+						"id": "uuid"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579416627
+				},
+				{
+					"id": "38",
+					"name": "owner_id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579425286
+				},
+				{
+					"id": "39",
+					"name": "guest_id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579442293
+				},
+				{
+					"id": "40",
+					"name": "collection_id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579468300
+				},
+				{
+					"id": "41",
+					"name": "expires_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579476551
+				},
+				{
+					"id": "42",
+					"name": "created_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579485650,
+					"comments": "NOW()"
+				},
+				{
+					"id": "43",
+					"name": "updated_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731579496673,
+					"comments": "NOW()"
+				}
+			],
+			"indexes": [
+				{
+					"id": "44",
+					"name": "index_1",
+					"fieldIds": ["38", "39", "40"],
+					"unique": true,
+					"createdAt": 1731579535459
+				}
+			],
+			"color": "#7175fa",
+			"createdAt": 1731579402972,
+			"isView": false,
+			"diagramId": "wkgvxh27sthp"
+		},
+		{
+			"id": "45",
+			"name": "users",
+			"x": 1580,
+			"y": 560,
+			"fields": [
+				{
+					"id": "46",
+					"name": "id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": true,
+					"createdAt": 1731577663796
+				},
+				{
+					"id": "47",
+					"name": "uid",
+					"type": {
+						"name": "uuid",
+						"id": "uuid"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731578865090
+				},
+				{
+					"id": "48",
+					"name": "firstname",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731578295773
+				},
+				{
+					"id": "49",
+					"name": "lastname",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731578408294
+				},
+				{
+					"id": "50",
+					"name": "email",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731578418743,
+					"comments": "varchar(180)"
+				},
+				{
+					"id": "51",
+					"name": "password",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731578479076
+				},
+				{
+					"id": "52",
+					"name": "username",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731578578931,
+					"comments": "varchar(50)"
+				},
+				{
+					"id": "53",
+					"name": "reset_password_token",
+					"type": {
+						"name": "uuid",
+						"id": "uuid"
+					},
+					"unique": false,
+					"nullable": true,
+					"primaryKey": false,
+					"createdAt": 1731578643853
+				},
+				{
+					"id": "54",
+					"name": "created_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731578700187,
+					"comments": "NOW()"
+				},
+				{
+					"id": "55",
+					"name": "updated_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731578710820,
+					"comments": "NOW()"
+				}
+			],
+			"indexes": [
+				{
+					"id": "56",
+					"name": "index_1",
+					"fieldIds": [],
+					"unique": false,
+					"createdAt": 1731578725975
+				}
+			],
+			"color": "#b067e9",
+			"createdAt": 1731577663796,
+			"isView": false,
+			"diagramId": "wkgvxh27sthp"
+		},
+		{
+			"id": "57",
+			"name": "card_types",
+			"x": 100,
+			"y": 740,
+			"fields": [
+				{
+					"id": "58",
+					"name": "id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": true,
+					"createdAt": 1731581792353
+				},
+				{
+					"id": "59",
+					"name": "uid",
+					"type": {
+						"name": "uuid",
+						"id": "uuid"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731581815385
+				},
+				{
+					"id": "60",
+					"name": "name",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731581834310
+				},
+				{
+					"id": "61",
+					"name": "color",
+					"type": {
+						"name": "char",
+						"id": "char"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731581876875,
+					"comments": "char(7)"
+				},
+				{
+					"id": "62",
+					"name": "created_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731581966481,
+					"comments": "NOW()"
+				},
+				{
+					"id": "63",
+					"name": "updated_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731581980529,
+					"comments": "NOW()"
+				}
+			],
+			"indexes": [],
+			"color": "#b067e9",
+			"createdAt": 1731581792353,
+			"isView": false
+		},
+		{
+			"id": "64",
+			"name": "card_typologies",
+			"x": 500,
+			"y": 780,
+			"fields": [
+				{
+					"id": "65",
+					"name": "id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": true,
+					"createdAt": 1731582007600
+				},
+				{
+					"id": "66",
+					"name": "uid",
+					"type": {
+						"name": "uuid",
+						"id": "uuid"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582024439
+				},
+				{
+					"id": "67",
+					"name": "name",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582035198
+				},
+				{
+					"id": "68",
+					"name": "created_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582047451,
+					"comments": "NOW()"
+				},
+				{
+					"id": "69",
+					"name": "updated_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582063127,
+					"comments": "NOW()"
+				}
+			],
+			"indexes": [],
+			"color": "#4dee8a",
+			"createdAt": 1731582007600,
+			"isView": false
+		},
+		{
+			"id": "70",
+			"name": "illustrators",
+			"x": 760,
+			"y": 660,
+			"fields": [
+				{
+					"id": "71",
+					"name": "id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": true,
+					"createdAt": 1731582108020
+				},
+				{
+					"id": "72",
+					"name": "uid",
+					"type": {
+						"name": "uuid",
+						"id": "uuid"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582118784
+				},
+				{
+					"id": "73",
+					"name": "firstname",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582138030
+				},
+				{
+					"id": "74",
+					"name": "lastname",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582145181
+				},
+				{
+					"id": "75",
+					"name": "country_id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582152864
+				},
+				{
+					"id": "76",
+					"name": "created_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582165496,
+					"comments": "NOW()"
+				},
+				{
+					"id": "77",
+					"name": "updated_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582177647,
+					"comments": "NOW()"
+				}
+			],
+			"indexes": [],
+			"color": "#8eb7ff",
+			"createdAt": 1731582108020,
+			"isView": false
+		},
+		{
+			"id": "78",
+			"name": "countries",
+			"x": 1100,
+			"y": 800,
+			"fields": [
+				{
+					"id": "79",
+					"name": "id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": true,
+					"createdAt": 1731582208294
+				},
+				{
+					"id": "80",
+					"name": "uid",
+					"type": {
+						"name": "uuid",
+						"id": "uuid"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582221072
+				},
+				{
+					"id": "81",
+					"name": "name",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582235600
+				},
+				{
+					"id": "82",
+					"name": "created_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582248217,
+					"comments": "NOW()"
+				},
+				{
+					"id": "83",
+					"name": "updated_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582261542,
+					"comments": "NOW()"
+				}
+			],
+			"indexes": [],
+			"color": "#b067e9",
+			"createdAt": 1731582208294,
+			"isView": false
+		},
+		{
+			"id": "84",
+			"name": "extensions",
+			"x": 1120,
+			"y": 460,
+			"fields": [
+				{
+					"id": "85",
+					"name": "id",
+					"type": {
+						"name": "integer",
+						"id": "integer"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": true,
+					"createdAt": 1731582293334
+				},
+				{
+					"id": "86",
+					"name": "uid",
+					"type": {
+						"name": "uuid",
+						"id": "uuid"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582304199
+				},
+				{
+					"id": "87",
+					"name": "name",
+					"type": {
+						"name": "varchar",
+						"id": "varchar"
+					},
+					"unique": true,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582311964
+				},
+				{
+					"id": "88",
+					"name": "size",
+					"type": {
+						"name": "smallint",
+						"id": "smallint"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582329910
+				},
+				{
+					"id": "89",
+					"name": "released_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582343951
+				},
+				{
+					"id": "90",
+					"name": "created_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582356510,
+					"comments": "NOW()"
+				},
+				{
+					"id": "91",
+					"name": "updated_at",
+					"type": {
+						"name": "timestamp",
+						"id": "timestamp"
+					},
+					"unique": false,
+					"nullable": false,
+					"primaryKey": false,
+					"createdAt": 1731582367106,
+					"comments": "NOW()"
+				}
+			],
+			"indexes": [],
+			"color": "#8eb7ff",
+			"createdAt": 1731582293334,
+			"isView": false
+		}
+	],
+	"relationships": [
+		{
+			"id": "92",
+			"name": "cards_collections_card_id_fk",
+			"sourceTableId": "17",
+			"targetTableId": "1",
+			"sourceFieldId": "18",
+			"targetFieldId": "2",
+			"sourceCardinality": "one",
+			"targetCardinality": "many",
+			"createdAt": 1731582550156
+		},
+		{
+			"id": "93",
+			"name": "cards_collections_collection_id_fk",
+			"sourceTableId": "17",
+			"targetTableId": "22",
+			"sourceFieldId": "19",
+			"targetFieldId": "23",
+			"sourceCardinality": "one",
+			"targetCardinality": "many",
+			"createdAt": 1731582749850
+		},
+		{
+			"id": "94",
+			"name": "cards_card_type_id_fk",
+			"sourceTableId": "1",
+			"targetTableId": "57",
+			"sourceFieldId": "8",
+			"targetFieldId": "58",
+			"sourceCardinality": "one",
+			"targetCardinality": "many",
+			"createdAt": 1731582784823
+		},
+		{
+			"id": "95",
+			"name": "cards_card_typology_id_fk",
+			"sourceTableId": "1",
+			"targetTableId": "64",
+			"sourceFieldId": "7",
+			"targetFieldId": "65",
+			"sourceCardinality": "one",
+			"targetCardinality": "many",
+			"createdAt": 1731582824656
+		},
+		{
+			"id": "96",
+			"name": "cards_illustrator_id_fk",
+			"sourceTableId": "1",
+			"targetTableId": "70",
+			"sourceFieldId": "11",
+			"targetFieldId": "71",
+			"sourceCardinality": "one",
+			"targetCardinality": "many",
+			"createdAt": 1731582850233
+		},
+		{
+			"id": "97",
+			"name": "cards_extension_id_fk",
+			"sourceTableId": "1",
+			"targetTableId": "84",
+			"sourceFieldId": "13",
+			"targetFieldId": "85",
+			"sourceCardinality": "one",
+			"targetCardinality": "many",
+			"createdAt": 1731582917754
+		},
+		{
+			"id": "98",
+			"name": "collections_users_collection_id_fk",
+			"sourceTableId": "30",
+			"targetTableId": "22",
+			"sourceFieldId": "31",
+			"targetFieldId": "23",
+			"sourceCardinality": "one",
+			"targetCardinality": "many",
+			"createdAt": 1731582978369
+		},
+		{
+			"id": "99",
+			"name": "collections_users_user_id_fk",
+			"sourceTableId": "30",
+			"targetTableId": "45",
+			"sourceFieldId": "32",
+			"targetFieldId": "46",
+			"sourceCardinality": "one",
+			"targetCardinality": "many",
+			"createdAt": 1731582994300
+		},
+		{
+			"id": "100",
+			"name": "invitations_owner_id_fk",
+			"sourceTableId": "35",
+			"targetTableId": "45",
+			"sourceFieldId": "38",
+			"targetFieldId": "46",
+			"sourceCardinality": "one",
+			"targetCardinality": "many",
+			"createdAt": 1731583027192
+		},
+		{
+			"id": "101",
+			"name": "invitations_guest_id_fk",
+			"sourceTableId": "35",
+			"targetTableId": "45",
+			"sourceFieldId": "39",
+			"targetFieldId": "46",
+			"sourceCardinality": "one",
+			"targetCardinality": "many",
+			"createdAt": 1731583031296
+		},
+		{
+			"id": "102",
+			"name": "invitations_collection_id_fk",
+			"sourceTableId": "35",
+			"targetTableId": "22",
+			"sourceFieldId": "40",
+			"targetFieldId": "23",
+			"sourceCardinality": "one",
+			"targetCardinality": "many",
+			"createdAt": 1731583048858
+		},
+		{
+			"id": "103",
+			"name": "illustrators_country_id_fk",
+			"sourceTableId": "70",
+			"targetTableId": "78",
+			"sourceFieldId": "75",
+			"targetFieldId": "79",
+			"sourceCardinality": "one",
+			"targetCardinality": "many",
+			"createdAt": 1731583079898
+		}
+	],
+	"dependencies": []
+}

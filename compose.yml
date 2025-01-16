@@ -1,0 +1,21 @@
+services:
+  database:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: bdd_intro_database
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: bddintro
+    networks:
+      - default
+    ports:
+      - '43252:5432'
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+    name: vol_bdd_intro_postgres
