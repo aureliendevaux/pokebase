@@ -1,1 +1,2 @@
 -- Sélectionner tous les noms des cartes du set nommé `Mysterious Treasures`
+-- Sélectionner tous les noms des cartes du set nommé `Mysterious Treasures` (regarder l'ID correspondant dans la table `sets`), la colonne affichée devant s'appeler "card_name"
