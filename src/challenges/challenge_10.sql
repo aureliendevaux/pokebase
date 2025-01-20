@@ -1,0 +1,1 @@
+-- Supprimer toutes les cartes dont le nom se termine par la lettre "z" (case-insensitive) et en afficher les IDs supprimés

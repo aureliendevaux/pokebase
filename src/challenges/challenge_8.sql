@@ -1,0 +1,1 @@
+-- Sélectionner tous les noms des cartes du set "Silver Tempest" ainsi que le nom de leur supertype correspondant

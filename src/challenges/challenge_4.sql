@@ -1,0 +1,2 @@
+-- Insérer une nouvelle collection portant le nom 'mes cartes' et qui est privée
+-- Pour créer un UID, vous pouvez utiliser ce site : https://uuidgenerator.ai/v7

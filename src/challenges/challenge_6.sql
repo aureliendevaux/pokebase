@@ -1,0 +1,1 @@
+-- Modifier dans la table `rarities` la ligne avec le nom `LEGEND` en `Légendaire`
